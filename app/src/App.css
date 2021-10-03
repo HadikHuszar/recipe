@@ -1,0 +1,501 @@
+.font-link {
+  font-family: "Qwigley", cursive;
+  font-family: "Heebo", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Rock Salt", cursive;
+  font-family: "Spartan", sans-serif;
+  font-family: "Cinzel Decorative", cursive;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+/* ////// Interface /////// */
+body {
+  font-family: "Roboto", sans-serif;
+  /* background-color: rgb(238, 232, 241); */
+  /* background-color: rgb(234, 233, 247); */
+  color: rgb(0, 0, 0);
+}
+
+main {
+  display: flex;
+  content: center;
+  justify-content: right;
+  margin-top: 1em;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  /* background: rgb(0, 0, 0); */
+  /* background-image: url("image.jpeg"); */
+  background-position: absolute;
+  background-image: url("./assets/image.jpeg");
+}
+
+section {
+  box-sizing: border-box; /* or not */
+  z-index: 0;
+  /* margin: 0 auto; */
+  margin-top: -40px;
+  margin-left: 5px;
+  width: 35rem;
+  height: 34rem;
+  background: rgba(23, 1, 68, 0.893);
+  opacity: 0.9;
+  /* padding: 1.5rem; */
+  background-image: url("./assets/Top_Right_Corner_new.jpeg");
+}
+
+::placeholder {
+  color: rgb(179, 179, 220);
+}
+
+li {
+  margin-top: 15px;
+}
+
+#page-title {
+  font-family: "Red Hat Display", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 150px;
+  letter-spacing: -8px;
+  opacity: 1;
+  position: absolute;
+  top: -20px;
+  left: 50px;
+}
+
+#page-subtitle {
+  font-family: "Spartan", sans-serif;
+  font-weight: 400;
+  font-variant-caps: all-petite-caps;
+  color: rgb(255, 162, 0);
+  opacity: 1;
+  font-size: 32px;
+  letter-spacing: -1.5px;
+  position: absolute;
+  top: 130px;
+  left: 54px;
+}
+
+#page-biline {
+  font-family: "Rock Salt", sans-serif;
+  color: rgb(41, 164, 0);
+  text-shadow: 1px 1px 0px rgb(0, 0, 0);
+  opacity: 0.5;
+  font-size: 32px;
+  position: absolute;
+  top: 50px;
+  left: 360px;
+  z-index: 3;
+}
+
+#why-201-sidebar {
+  position: flex;
+  margin-top: -40px;
+}
+
+#why-201-sidebar-title {
+  position: relative;
+  top: 10px;
+  font-family: "Rock Salt", sans-serif;
+  color: rgb(255, 162, 0);
+  text-shadow: 1px 1.5px 0px rgba(0, 0, 0, 0.7);
+  font-size: 48px;
+}
+
+#why-201-sidebar-subtitle {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  font-family: "Red Hat Display", sans-serif;
+  color: rgb(255, 162, 0);
+  text-shadow: 1px 1.5px 0px rgba(0, 0, 0, 0.7);
+  font-size: 42px;
+}
+
+#why-201-sidebar-text {
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  max-width: 300px;
+  color: rgb(133, 133, 133);
+  font-size: 24px;
+}
+
+#nice-to-meet-you-sidebar-text {
+  margin-top: 50px;
+  margin-right: 30px;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  max-width: 350px;
+  color: rgb(133, 133, 133);
+  font-size: 24px;
+}
+
+#nice-to-meet-you-title {
+  position: relative;
+  top: -10px;
+  font-family: "Red Hat Display", sans-serif;
+  color: rgb(12, 194, 115);
+  text-shadow: 1px 1.5px 0px rgba(0, 0, 0, 0.7);
+  font-size: 38px;
+}
+
+#two-degrees {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+}
+
+#signature {
+  position: relative;
+  top: -30px;
+  left: 200px;
+}
+
+#profile-photo {
+  position: relative;
+  top: -55px;
+  left: 10px;
+}
+
+/* #recipe-toolbox-title {
+  position: absolute;
+  font-family: "Rock Salt", sans-serif;
+  font-size: 44px;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2.5px 0px rgba(0, 0, 0, 0.3);
+  margin-top: -83px;
+  margin-left: 115px;
+} */
+
+#ingredient-list {
+  position: absolute;
+  top: 280px;
+  left: 180px;
+  display: inline-block;
+  max-width: 340px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+#ingredient-list-title {
+  position: absolute;
+  top: 240px;
+  left: 190px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Rock Salt", sans-serif;
+  font-size: 36px;
+  letter-spacing: -1px;
+  line-height: 28px;
+}
+
+#ingredient_quantity {
+  color: green;
+}
+
+#unit_measure {
+  position: relative;
+  left: 3px;
+  color: green;
+}
+
+#ingredient_name {
+  position: relative;
+  left: 10px;
+}
+
+#task-list {
+  position: absolute;
+  top: 280px;
+  left: 690px;
+  display: inline-block;
+  max-width: 450px;
+  color: rgba(0, 0, 0, 0.892);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+#task-list-title {
+  position: absolute;
+  top: 240px;
+  left: 770px;
+  color: rgba(0, 0, 0, 0.892);
+  font-family: "Rock Salt", sans-serif;
+  font-size: 36px;
+  letter-spacing: -1px;
+  line-height: 28px;
+}
+
+#add-recipe {
+  position: relative;
+  top: 140px;
+  left: 170px;
+}
+
+#add-task {
+  position: relative;
+  top: 75px;
+  left: 170px;
+}
+
+#add-ingredient {
+  position: relative;
+  top: 190px;
+  left: 170px;
+}
+
+#submit-button {
+  position: relative;
+  top: 180px;
+  left: 245px;
+  background-color: orange;
+}
+
+#input_recipe_title {
+  position: relative;
+  left: 5px;
+  width: 200px;
+}
+
+#input_recipe_image {
+  position: relative;
+  left: 5px;
+  width: 200px;
+}
+
+#input_recipe_video {
+  position: relative;
+  left: 5px;
+  width: 200px;
+}
+
+#input_recipe_description {
+  position: relative;
+  left: 5px;
+  width: 200px;
+}
+
+#recipe_button {
+  position: relative;
+  top: 1px;
+  left: 15px;
+}
+
+#input_directions {
+  position: relative;
+  left: 5px;
+  width: 124px;
+}
+
+#directions_button {
+  position: relative;
+  top: 1px;
+  left: 15px;
+}
+
+#input_ingredient_name {
+  position: relative;
+  left: 5px;
+  width: 200px;
+}
+
+#input_ingredient_quantity {
+  position: relative;
+  left: 5px;
+  width: 200px;
+}
+
+#input_ingredient_unitmeasure {
+  position: relative;
+  left: 5px;
+  width: 200px;
+}
+
+#ingredients_button {
+  position: relative;
+  top: 1px;
+  left: 15px;
+}
+
+#dashboard-sidebar-title {
+  position: relative;
+  top: -10px;
+  margin-left: 85px;
+  font-family: "Rock Salt", sans-serif;
+  text-shadow: 2px 2.5px 0px rgba(0, 0, 0, 0.3);
+  color: black;
+  font-size: 34px;
+}
+
+#recipe-details-block {
+  font-family: "Rock Salt", sans-serif;
+  color: rgb(26, 133, 4);
+  font-size: 18px;
+  line-height: 24px;
+  position: relative;
+  left: 100px;
+  top: -30px;
+}
+
+#recipe_title {
+  display: inline-block;
+  max-width: 350px;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  font-size: 20px;
+}
+
+#recipe_image {
+  margin-left: 20px;
+}
+#recipe_video {
+  margin-left: 23px;
+}
+
+#recipe_description {
+  display: inline-block;
+  max-width: 350px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: black;
+}
+
+#recipe_title_mockup {
+  position: absolute;
+  left: 320px;
+  top: 240px;
+  font-family: "Rock Salt", sans-serif;
+  font-size: 50px;
+  letter-spacing: -1px;
+  line-height: 28px;
+}
+
+#recipe_description_mockup {
+  position: absolute;
+  left: 360px;
+  top: 350px;
+  width: 1000px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+  color: black;
+  overflow-wrap: break-word;
+}
+
+#recipe_image_mockup {
+  position: absolute;
+  left: 350px;
+  top: 620px;
+}
+
+#recipe_video_mockup {
+  position: absolute;
+  left: 900px;
+  top: 620px;
+}
+
+#sidebar_block_mockup {
+  position: flex;
+  margin-top: -20px;
+  margin-right: 50px;
+  z-index: 10;
+  display: inline-block;
+  max-width: 250px;
+}
+
+#task_list_title_mockup {
+  position: relative;
+  left: 20px;
+  font-family: "Rock Salt", sans-serif;
+  font-size: 30px;
+  letter-spacing: -1px;
+  line-height: 28px;
+}
+
+#task_list_mockup {
+  position: relative;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  color: black;
+}
+
+#ingredient_list_title_mockup {
+  position: relative;
+  left: 10px;
+  font-family: "Rock Salt", sans-serif;
+  font-size: 24px;
+  letter-spacing: -1px;
+  line-height: 34px;
+}
+
+#ingredient_list_mockup {
+  position: relative;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  color: black;
+}
+
+#ingredient_quantity_mockup {
+  color: green;
+}
+
+#unit_measure_mockup {
+  position: relative;
+  left: 3px;
+  color: green;
+}
+
+#ingredient_name_mockup {
+  position: relative;
+  left: 10px;
+}
+
+#main-block {
+  position: absolute;
+  top: 160px;
+  left: 580px;
+}
+
+#main-title {
+  position: absolute;
+  top: 1010px;
+  left: 540px;
+  font-family: "Rock Salt", sans-serif;
+  color: rgb(216, 139, 6);
+  text-shadow: 1px 1.5px 0px rgba(0, 0, 0, 0.7);
+  font-size: 72px;
+}
+
+#main-text {
+  position: absolute;
+  top: 236px;
+  left: 98px;
+  display: inline-block;
+  max-width: 334px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 26px;
+  color: black;
+  line-height: 34px;
+}
+
+#main-text-title {
+  position: relative;
+  top: -10px;
+  font-family: "Red Hat Display", sans-serif;
+  color: rgb(216, 139, 6);
+  text-shadow: 1px 1.5px 0px rgba(0, 0, 0, 0.2);
+  font-size: 44px;
+}
+
+.carousel {
+  max-width: 700px;
+}
+.carousel-inner > .item > img {
+  object-fit: contain;
+}

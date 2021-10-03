@@ -2,34 +2,41 @@ import * as React from "react";
 
 import { Routes, Route, Link } from "react-router-dom";
 
-import Tasks from "./Tasks";
+import RecipePage from "./Recipe";
+import RecipeToolBox from "./RecipeToolBox";
+import Welcome from "./Welcome";
 
 const App = () => (
   <>
     <nav>
-      <Link to="/">Home</Link> | <Link to="dashboard">Dashboard</Link>
+      <Link to="/">Home</Link> | <Link to="welcome">Welcome</Link> |
+      <Link to="dashboard">Recipe Dashboard</Link> |
+      <Link to="/recipes">Recipe Page</Link>
+      <span id="page-title">201&deg;</span>
+      <span id="page-subtitle">Food, &nbsp;&nbsp;Perfected</span>
+      <span id="page-biline">In Search of Quintessential Food Hacks</span>
     </nav>
     <main>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="/dashboard"
+          element={
+            <div>
+              <RecipeToolBox />
+            </div>
+          }
+        />
+        <Route path="/recipes/:id" element={<RecipePage />} />
+        <Route path="welcome" element={<Welcome />} />
       </Routes>
     </main>
   </>
 );
 
-const Home = () => (
-  <>
-    <h1>{process.env.REACT_APP_TITLE}</h1>
-    <h2>{process.env.REACT_APP_SUBTITLE}</h2>
-    <Tasks />
-  </>
-);
-
-const Dashboard = () => (
-  <>
-    <h1>Dashboard</h1>
-  </>
-);
+// const Welcome = () => (
+//   <>
+//     <Welcome />
+//   </>
+// );
 
 export default App;
