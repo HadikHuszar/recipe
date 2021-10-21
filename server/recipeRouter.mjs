@@ -13,10 +13,18 @@ recipeRouter.get("/", async (request, response) => {
 
 recipeRouter.get("/:id", async (request, response) => {
   const recipeId = request.params.id;
-  response.json({
-    recipe: await db.getRecipe(recipeId),
-    ingredients: await db.getIngredientsForRecipe(recipeId),
-    tasks: await db.getTasksForRecipe(recipeId),
+
+  return Promise.all([
+    db.getRecipe(recipeId),
+    db.getIngredientsForRecipe(recipeId),
+    db.getTasksForRecipe(recipeId),
+  ]).then((values) => {
+    const [recipevalue, ingredientsvalue, tasksvalue] = values;
+    return response.json({
+      recipe: recipevalue,
+      ingredients: ingredientsvalue,
+      tasks: tasksvalue,
+    });
   });
 });
 

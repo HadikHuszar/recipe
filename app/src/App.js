@@ -33,10 +33,4 @@ const App = () => (
   </>
 );
 
-// const Welcome = () => (
-//   <>
-//     <Welcome />
-//   </>
-// );
-
 export default App;

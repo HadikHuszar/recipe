@@ -364,40 +364,71 @@ li {
   max-width: 350px;
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
-  color: black;
+  color: rgb(60, 60, 60);
 }
 
 #recipe_title_mockup {
   position: absolute;
-  left: 320px;
-  top: 240px;
+  left: 200px;
+  top: 260px;
   font-family: "Rock Salt", sans-serif;
   font-size: 50px;
+  text-shadow: 4px 2px 4px #c9c8c8;
   letter-spacing: -1px;
   line-height: 28px;
 }
 
 #recipe_description_mockup {
   position: absolute;
-  left: 360px;
+  left: 260px;
   top: 350px;
   width: 1000px;
   font-family: "Times New Roman", Times, serif;
   font-size: 28px;
-  color: black;
+  color: rgb(80, 80, 80);
   overflow-wrap: break-word;
 }
 
 #recipe_image_mockup {
   position: absolute;
-  left: 350px;
-  top: 620px;
+  outline: 4px solid rgb(207, 205, 205);
+  outline-offset: -4px;
+  box-shadow: inset 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+  left: 900px;
+  top: 548px;
 }
 
 #recipe_video_mockup {
   position: absolute;
-  left: 900px;
-  top: 620px;
+  outline: 8px solid rgb(207, 205, 205);
+  outline-offset: -4px;
+  box-shadow: inset 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+  left: 260px;
+  top: 550px;
+}
+
+#recipe_video_title_mockup {
+  position: absolute;
+  left: 310px;
+  top: 890px;
+  font-family: "Rock Salt", sans-serif;
+  color: rgb(138, 136, 136);
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 28px;
+}
+
+#recipe_image_title_mockup {
+  position: absolute;
+  left: 1005px;
+  top: 1020px;
+  font-family: "Rock Salt", sans-serif;
+  color: rgb(138, 136, 136);
+  font-size: 32px;
+  letter-spacing: 0px;
+  line-height: 28px;
 }
 
 #sidebar_block_mockup {
@@ -406,7 +437,7 @@ li {
   margin-right: 50px;
   z-index: 10;
   display: inline-block;
-  max-width: 250px;
+  max-width: 330px;
 }
 
 #task_list_title_mockup {
@@ -421,7 +452,7 @@ li {
 #task_list_mockup {
   position: relative;
   font-family: "Times New Roman", Times, serif;
-  font-size: 18px;
+  font-size: 21px;
   color: black;
 }
 
@@ -429,7 +460,7 @@ li {
   position: relative;
   left: 10px;
   font-family: "Rock Salt", sans-serif;
-  font-size: 24px;
+  font-size: 28px;
   letter-spacing: -1px;
   line-height: 34px;
 }
@@ -437,7 +468,7 @@ li {
 #ingredient_list_mockup {
   position: relative;
   font-family: "Times New Roman", Times, serif;
-  font-size: 22px;
+  font-size: 24px;
   color: black;
 }
 
@@ -458,7 +489,7 @@ li {
 
 #main-block {
   position: absolute;
-  top: 160px;
+  top: 235px;
   left: 580px;
 }
 
@@ -499,3 +530,7 @@ li {
 .carousel-inner > .item > img {
   object-fit: contain;
 }
+
+/* .carousel-item {
+  transition-duration: 2.5s, 2.5s;
+} */

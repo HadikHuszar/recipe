@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { useParams } from "react-router";
-import { useLocation } from "react-router-dom";
 
 import * as apiClient from "./apiClient";
 
@@ -18,7 +17,7 @@ const RecipePage = () => {
 
   const [currentRecipeId, setCurrentRecipeId] = React.useState();
 
-  const loadTasks = async () => setTasks(await apiClient.getTasks());
+  // const loadTasks = async () => setTasks(await apiClient.getTasks());
 
   const loadRecipeDetails = async () => {
     const apiRecipe = await apiClient.getRecipe(currentRecipeId);
@@ -33,10 +32,6 @@ const RecipePage = () => {
   React.useEffect(() => {
     setCurrentRecipeId(params.id);
   }, []);
-
-  // React.useEffect(() => {
-  //   loadRecipeDetails();
-  // }, []);
 
   React.useEffect(() => {
     if (!currentRecipeId) {
@@ -120,8 +115,10 @@ const Recipes = ({
     <span id="recipe_title_mockup">{recipe_title}</span>
 
     <span id="recipe_image_mockup">
-      <img src={recipe_image} width="500" height="450" />
+      <img src={recipe_image} width="450" height="450" />
     </span>
+
+    <span id="recipe_image_title_mockup">Finished Dish</span>
 
     <div id="recipe_video_mockup">
       <iframe
@@ -129,11 +126,13 @@ const Recipes = ({
         height="315"
         src={recipe_video}
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allowFullScreen
       ></iframe>
     </div>
+
+    <span id="recipe_video_title_mockup">Step-by-Step Directions</span>
 
     <span id="recipe_description_mockup">{recipe_description}</span>
   </span>

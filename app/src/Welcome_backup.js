@@ -4,52 +4,50 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
 
-import * as apiClient from "./apiClient";
 import imageSrc from "./assets/EHB_Profile_Circular.png";
 import imageSrc2 from "./assets/EHB_Signature.png";
 
 import "./App.css";
 
 const Welcome = () => {
-  const [recipe, setRecipes] = React.useState([]);
-
-  const loadRecipeDetails = async () =>
-    setRecipes(await apiClient.getRecipeDetails());
-  console.log(recipe);
-
-  React.useEffect(() => {
-    loadRecipeDetails();
-  }, []);
-
+  ///api call for all recipes
+  ///map pass it ot eh carousel
   return (
     <>
       <span id="main-block">
-        <Carousel autoPlay infiniteLoop interval="6000">
-          {recipe.map(({ id, recipe_image, recipe_title }) => (
-            <div key={id}>
-              <Link to={`/recipes/${id}`}>
-                <img class="img-fluid" src={recipe_image} />
-                <p className="legend">{recipe_title}</p>
-              </Link>
-            </div>
-          ))}
+        <Carousel autoPlay>
+          {/* <Link to={``}> */}
+          <div>
+            <img
+              class="img-fluid"
+              src="https://lh3.googleusercontent.com/nf0Ub8NE8Sjy4BgLT8mEuWvqsSEf8Vc8rOZ00lR8cLZIqi5lGs_ZI3tiy4utzwK9en2dqbtHmABrHLAmzZpmaw3-UTCo1LqZLiJlJ0Ri9VFfqdbYs8Xe_ArwRpQCv6M06oDPMuZP=w2400"
+            />
+            <p className="legend">Zucchini Spaghetti with Avocado Sauce</p>
+            {/* </Link> */}
+          </div>
+          <div>
+            <img
+              class="img-fluid"
+              src="https://lh3.googleusercontent.com/BHH6U-5pVqumEZfrfWOT1CZJZFcGUINo1fwWsjovg3d3ossA3D7GpVVU1Q-q4LA8ZWBKc5P4fI9f82bTjoTMl9LkvpQR9GFjKN4o7LXNnWOFCLtkmjQbBhI4OvTFvIQ1q2b2y5i1=w2400"
+            />
+            <p className="legend">Spaghetti with Crispy Zucchini</p>
+          </div>
+          <div>
+            <img
+              class="img-fluid"
+              src="https://lh3.googleusercontent.com/zlAVgHeNX2rgpsM-H1RGlMxHitr1XPxkK_GWT_p8anl-lq8oBWKQpSMqj8whI8UVV2jwt8J-W20GBx778KGbVPXHMg7EuRdAEZee45wSeiZW497I5LXVYyq_Fp7-eUfkhUcgTfZo=w2400"
+            />
+            <p className="legend">Lifechanging Beef Stew</p>
+          </div>
+          <div>
+            <img
+              class="img-fluid"
+              src="https://lh3.googleusercontent.com/t7E0aKao-h-uksGgj-byu35X38wv2kw_z96q_dw-BycTIWUV2M2ofLOKRiMTy9jb8rXRRy8sieAGmQTp7ltQnnl6Wgl7PBXCcyP0QDukDJ_dS3Vq6GjQW-QLrzobuKP52TjTPfW5=w2400"
+            />
+            <p className="legend">Smokey Red Lentil</p>
+          </div>
         </Carousel>
       </span>
-
-      {/* {recipe.map(({ id, recipe_image, recipe_title }) => (
-        <span key={id}>
-          <span id="main-block">
-            <Carousel autoPlay>
-              <div>
-                <Link to={`/recipes/${id}`}>
-                  <img class="img-fluid" src={recipe_image} />
-                  <p className="legend">{recipe_title}</p>
-                </Link>
-              </div>
-            </Carousel>
-          </span>
-        </span>
-      ))} */}
 
       <span id="main-text">
         <span id="main-text-title">Fall Is Upon Us...</span>
